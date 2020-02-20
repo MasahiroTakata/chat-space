@@ -26,9 +26,9 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|varchar|null: false, add_index: true|
-|email|varchar|null: false, unique: true|
-|password|varchar|null: false|
+|name|string|null: false, add_index: true|
+|email|string|null: false, unique: true|
+|password|string|null: false|
 ### Association
 - has_many :groups, through: :groups_users
 - has_many :messages
@@ -37,7 +37,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|varchar|null: false, foreign_key: false|
+|name|string|null: false, foreign_key: false|
 ### Association
 - has_many :users, through: :groups_users
 - has_many :messages
