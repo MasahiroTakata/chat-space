@@ -26,31 +26,30 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|user_name|varchar|null: false, foreign_key: false|
-|user_email|varchar|null: false, foreign_key: false|
-|user_password|varchar|null: false, foreign_key: false|
+|name|varchar|null: false, add_index: true|
+|email|varchar|null: false, unique: true|
+|password|varchar|null: false|
 ### Association
 - has_many :groups, through: :groups_users
 - has_many :messages
+- has_many :groups_users
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false, foreign_key: true|
-|group_name|varchar|null: false, foreign_key: false|
+|name|varchar|null: false, foreign_key: false|
 ### Association
 - has_many :users, through: :groups_users
 - has_many :messages
+- has_many :groups_users
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|message_id|integer|null: false, foreign_key: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|body|varchar|null: false, foreign_key: false|
-|image|varchar|null: true, foreign_key: false|
+|body|text|
+|image|string|
 ### Association
 - belongs_to :user
 - belongs_to :group
@@ -61,5 +60,5 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :users
-- has_many :groups
+- belongs_to :user
+- belongs_to :group
