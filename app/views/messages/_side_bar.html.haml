@@ -9,5 +9,13 @@
         = link_to "#" do
           = fa_icon "cog"
   .sideBar__content
-    %p techcamp
-    %p まだメッセージがありません
+    .sideBar__content__groupbox
+      %p{class: 'sideBar__content__groupbox__groupName'} 
+        techcamp
+      %p{class: 'sideBar__content__groupbox__newMessage'}
+        まだメッセージがありません
+    .sideBar__content__groupbox
+      %p{class: 'sideBar__content__groupbox__groupName'} 
+        tech::expert In Namba!
+      %p{class: 'sideBar__content__groupbox__newMessage'}
+        まだメッセージがありません

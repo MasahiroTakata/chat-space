@@ -19,8 +19,6 @@
       display: flex;
       justify-content: space-between;
 
-      &__loginname{
-      }
       &__iconbox{
         a{
           color:white;
@@ -38,8 +36,18 @@
     padding-left: 20px;
     font-size: 15px;
 
-    &__group{
-      
+    &__groupbox{
+      width: 100%;
+
+      &__groupName{
+        padding-top: 20px;
+        padding-bottom: 5px;
+        font-size: 15px;
+      }
+      &__newMessage{
+        font-size: 11px;
+        padding-bottom: 40px;
+      }
     }
   }
 }

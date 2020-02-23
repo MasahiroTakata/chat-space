@@ -1,7 +1,13 @@
 .mainChat
   .mainChat__header
-    チャットヘッダ
-    .mainChat__header__textbox
+    .mainChat__header__groupname
+      %p{class: 'mainChat__header__groupname__name'}
+        グループ名
+      %p{class: 'mainChat__header__groupname__member'}
+        Member: masa
+    = link_to'#' do
+      Edit
+      /*%div{class: 'mainChat__header__editspace'}*/
   .mainChat__content
     チャットコンテンツ
   .mainChat__footer
