@@ -1,0 +1,20 @@
+.mainChat{
+  width: calc(100vw - 300px);
+  background-color:#ffffff;
+  &__header {
+    text-align: center;
+    height: 100px;
+    background-color: #ffffff;
+    border-bottom: solid 1px #eeeeee;
+  }
+  &__content {
+    text-align: center;
+    height: calc(100vh - 190px);
+    background-color: #fafafa;
+  }
+  &__footer {
+    text-align: center;
+    height: 90px;
+    background-color: #d2d2d2;
+  }
+}

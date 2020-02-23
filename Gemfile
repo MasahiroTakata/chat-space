@@ -54,3 +54,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # 2020/2/20 追記
 gem 'haml-rails'
+# アイコンがとれる
+gem 'font-awesome-sass'
+
+gem 'font-awesome-rails'
