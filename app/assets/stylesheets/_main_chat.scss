@@ -6,8 +6,8 @@
     height: 100px;
     background-color: #ffffff;
     border-bottom: solid 1px #eeeeee;
-    display: flex; /* 子要素が横並びになる */
-    justify-content: space-between; /* 子要素を均等に配置する */
+    display: flex;
+    justify-content: space-between;
     padding: 0 40px;
 
     &__groupname{
