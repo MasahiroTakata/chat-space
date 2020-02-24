@@ -7,8 +7,22 @@
         Member: masa
     = link_to'#' do
       Edit
-      /*%div{class: 'mainChat__header__editspace'}*/
+
   .mainChat__content
-    チャットコンテンツ
+    .mainChat__content__messageBox
+      .mainChat__content__messageBox__mAndT
+        .mainChat__content__messageBox__mAndT__member
+          masa
+        .mainChat__content__messageBox__mAndT__time
+          2020/2/23(Sunday) 17:12:01
+      .mainChat__content__messageBox__message
+        おはよう
   .mainChat__footer
-    チャットフッター
+    .mainChat__footer__inputspace
+      %input.mainChat__footer__inputspace__text{name: "message", placeholder: "type a message", type: "text", value: ""}
+
+      %label{class: "mainChat__footer__inputspace__imageBtn", for: "fileBtn"}
+        = fa_icon "image"
+        %input{type: "file", class: "mainChat__footer__inputspace__imageBtn__inputfile", id: "fileBtn"}
+
+    %input{type: "submit", class: "mainChat__footer__send", id: "sendBtn", value: "Send"}
