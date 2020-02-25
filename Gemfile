@@ -58,3 +58,6 @@ gem 'haml-rails'
 gem 'font-awesome-sass'
 
 gem 'font-awesome-rails'
+
+# 2020/2/25 追加
+gem 'devise' # ユーザ管理をしてくれる機能
