@@ -61,3 +61,4 @@ gem 'font-awesome-rails'
 
 # 2020/2/25 追加
 gem 'devise' # ユーザ管理をしてくれる機能
+gem 'pry-rails' # パラメータを確認する機能
