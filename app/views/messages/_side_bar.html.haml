@@ -4,19 +4,15 @@
       .sideBar__header__accountSpace__loginname
         = current_user.name
       .sideBar__header__accountSpace__iconbox
-        = link_to "#" do
+        = link_to new_group_path() do
           = fa_icon "edit"
         = link_to edit_user_path(current_user) do
           = fa_icon 'cog'
 
   .sideBar__content
     .sideBar__content__groupbox
-      %p{class: 'sideBar__content__groupbox__groupName'} 
-        techcamp
-      %p{class: 'sideBar__content__groupbox__newMessage'}
-        まだメッセージがありません
-    .sideBar__content__groupbox
-      %p{class: 'sideBar__content__groupbox__groupName'} 
-        tech::expert In Namba!
-      %p{class: 'sideBar__content__groupbox__newMessage'}
-        まだメッセージがありません
+      - current_user.groups.each do |group|
+        = link_to '#', class: 'sideBar__content__groupbox__groupName' do
+          = group.name
+        %p{class: 'sideBar__content__groupbox__newMessage'}
+          メッセージはまだありません。
