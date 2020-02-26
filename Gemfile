@@ -62,3 +62,7 @@ gem 'font-awesome-rails'
 # 2020/2/25 追加
 gem 'devise' # ユーザ管理をしてくれる機能
 gem 'pry-rails' # パラメータを確認する機能
+
+# 2020/2/26 追加
+gem 'carrierwave'
+gem 'mini_magick'

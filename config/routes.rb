@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root 'groups#index'
   # ユーザ管理機能のパス
   resources :users, only: [:edit, :update, :delete]
-  resources :groups, only: [:index, :new, :create, :edit, :update]
+  resources :groups, only: [:index, :new, :create, :edit, :update] do
+    resources :messages, only: [:index, :create]
+  end
 end

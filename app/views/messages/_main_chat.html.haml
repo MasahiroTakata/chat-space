@@ -8,15 +8,9 @@
     = link_to'#' do
       Edit
 
-  .mainChat__content
-    .mainChat__content__messageBox
-      .mainChat__content__messageBox__mAndT
-        .mainChat__content__messageBox__mAndT__member
-          masa
-        .mainChat__content__messageBox__mAndT__time
-          2020/2/23(Sunday) 17:12:01
-      .mainChat__content__messageBox__message
-        おはよう
+.messages
+  = render @messages
+
   .mainChat__footer
     .mainChat__footer__inputspace
       %input.mainChat__footer__inputspace__text{name: "message", placeholder: "type a message", type: "text", value: ""}
