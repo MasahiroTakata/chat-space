@@ -38,6 +38,13 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  # 2020/2/27 追記
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'capybara'
 end
 
 group :development do
@@ -61,7 +68,7 @@ gem 'font-awesome-rails'
 
 # 2020/2/25 追加
 gem 'devise' # ユーザ管理をしてくれる機能
-gem 'pry-rails' # パラメータを確認する機能
+# gem 'pry-rails' # パラメータを確認する機能
 
 # 2020/2/26 追加
 gem 'carrierwave'
