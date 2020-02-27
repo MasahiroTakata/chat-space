@@ -12,7 +12,8 @@
   .sideBar__content
     .sideBar__content__groupbox
       - current_user.groups.each do |group|
-        = link_to '#', class: 'sideBar__content__groupbox__groupName' do
-          = group.name
+        = link_to group_messages_path(group), class: 'sideBar__content__groupbox__groupName' do
+          .group__name
+            = group.name
         %p{class: 'sideBar__content__groupbox__newMessage'}
-          メッセージはまだありません。
+          = group.show_last_message

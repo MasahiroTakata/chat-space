@@ -2,14 +2,15 @@
   .mainChat__header
     .mainChat__header__groupname
       %p{class: 'mainChat__header__groupname__name'}
-        グループ名
+        = @group.name
       %p{class: 'mainChat__header__groupname__member'}
-        Member: masa
-    = link_to'#' do
+        = "Member:" + @group.users.pluck(:name).join(",")
+
+    = link_to edit_group_path(@group.id) do
       Edit
 
-.messages
-  = render @messages
+  .mainChat__content
+    = render @messages
 
   .mainChat__footer
     .mainChat__footer__inputspace

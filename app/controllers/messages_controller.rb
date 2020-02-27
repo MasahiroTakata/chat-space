@@ -4,6 +4,11 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
+    @group = Group.find(params[:group_id])
+
+    # 中間テーブル
+    #@group_users = @group.group_users
+    #@users = @group_users.user
   end
 
   def create
