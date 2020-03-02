@@ -1,6 +1,17 @@
 class UsersController < ApplicationController
-  def edit
+  def index
+    # 何も入力されていなければ、何もしない
+    return nil if params[:keyword] == ""
+    # 自分の名前を除く、入力値を含むユーザ名を取得する（１０件まで）
+    @users = User.where(['name LIKE ?', "%#{params[:keyword]}%"] ).where.not(id: current_user.id).limit(10)
+    
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
 
+  def edit
   end
 
   def update
