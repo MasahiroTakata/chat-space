@@ -13,11 +13,9 @@
     = render @messages
 
   .mainChat__footer
-    .mainChat__footer__inputspace
-      %input.mainChat__footer__inputspace__text{name: "message", placeholder: "type a message", type: "text", value: ""}
-
-      %label{class: "mainChat__footer__inputspace__imageBtn", for: "fileBtn"}
+    = form_for [@group, @message], html:{class: "mainChat__footer__inputspace"} do |f|
+      = f.text_field :content, class: 'mainChat__footer__inputspace__text', placeholder: 'type a message'
+      = f.label :image, class: 'mainChat__footer__inputspace__imageBtn' do
         = fa_icon "image"
-        %input{type: "file", class: "mainChat__footer__inputspace__imageBtn__inputfile", id: "fileBtn"}
-
-    %input{type: "submit", class: "mainChat__footer__send", id: "sendBtn", value: "Send"}
+        = f.file_field :image, class: 'mainChat__footer__inputspace__imageBtn__inputfile'
+      = f.submit 'Send', class: 'mainChat__footer__inputspace__send'
