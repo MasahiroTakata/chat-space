@@ -6,15 +6,15 @@ class MessagesController < ApplicationController
     @messages = @group.messages.includes(:user)
     @group = Group.find(params[:group_id])
 
-    # 中間テーブル
-    #@group_users = @group.group_users
-    #@users = @group_users.user
   end
 
   def create
     @message = @group.messages.new(message_params)
+
     if @message.save
-      redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
+      respond_to do |format| # フォーマットに応じたレスポンスを作成できる
+        format.json
+      end
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
