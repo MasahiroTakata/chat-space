@@ -74,3 +74,8 @@ gem 'devise' # ユーザ管理をしてくれる機能
 # 2020/2/26 追加
 gem 'carrierwave'
 gem 'mini_magick'
+
+# 2020/3/4 追加
+group :production do
+  gem 'unicorn', '5.4.1'
+end
