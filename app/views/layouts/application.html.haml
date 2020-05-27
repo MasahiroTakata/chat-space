@@ -2,10 +2,15 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title ChatSpace
+    %title 【最終課題】フリマアプリ
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
+  %header{:class => "pcHeader"}
+
   %body
     = render 'layouts/notifications'
     = yield
+
+  %footer
+  フッター

@@ -1,15 +1,15 @@
 @import "reset";
 @import "config/colors";
-@import "modules/messages";
-@import "side_bar";
-@import "main_chat";
-@import "modules/user";
-@import "modules/flash";
-@import "modules/group";
 
 /* アイコンが使える */
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
 .wrapper{
   display: flex;
+}
+header{
+  width: 100%;
+  height: 200px;
+  background-color: gray;
 }
